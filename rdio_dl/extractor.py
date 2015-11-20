@@ -91,7 +91,7 @@ class RdioIE(InfoExtractor):
                                            playerName=player_name,
                                            requiresUnlimited=False,
                                            finishedAd=False,
-                                           type='mp3-high')
+                                           type='aac-very-high')
 
         playback_info = playback_info.json()
 
@@ -131,7 +131,7 @@ class RdioIE(InfoExtractor):
     def _extract_track(self, track):
         info = {
             'id': track['key'],
-            'ext': u'mp3',
+            'ext': u'mp4',
             'title': track['name'],
             'uploader': track['artist'],
             'description': u'',
